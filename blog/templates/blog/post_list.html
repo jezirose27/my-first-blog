@@ -6,14 +6,13 @@
 	<div>
 		<h1><a href="">Jen is a Badass</a></h1>
 	</div>
-
 	<div>
-		<h2><a href ="">You're Reading This?</a></h2>
-		<p>I cannot believe that someone is actually reading this because it just seems bizarre.</p>
+{% for post in posts %}
+	<div>
+		<h3><a href="">{{ post.title }} </a></h3>
+		<p>{{ post.text|linebreaks }}</p>
 	</div>
-	<div>
-		<h3><a href ="">This heading is less important.</a></h3>
-		<p>Just saying that I think this is going to be a far less important topic at hand.</p>
+{% endfor %}
 	</div>
 </body>
 </html>
